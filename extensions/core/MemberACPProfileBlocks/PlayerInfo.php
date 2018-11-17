@@ -30,6 +30,6 @@ class _PlayerInfo extends \IPS\core\MemberACPProfile\Block
 	 */
 	public function output()
 	{
-		return "Hello, World!";
+		return \IPS\Theme::i()->getTemplate('memberprofile', 'everpanel', 'admin')->playerInfo($this->member);
 	}
 }

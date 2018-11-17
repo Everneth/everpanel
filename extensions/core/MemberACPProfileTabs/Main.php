@@ -37,7 +37,7 @@ class _Main extends \IPS\core\MemberACPProfile\MainTab
 	public function leftColumnBlocks()
 	{
 		return array(
-			'IPS\everpanel\extensions\core\MemberACPProfileBlocks\AccessLevels',
+			'IPS\everpanel\extensions\core\MemberACPProfileBlocks\PlayerInfo',
 		);
 	}
 }
