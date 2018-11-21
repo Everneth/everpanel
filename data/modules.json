@@ -1,1 +1,12 @@
-[]
+{
+    "front": {
+        "dashboard": {
+            "default_controller": "",
+            "protected": 0
+        },
+        "system": {
+            "default_controller": "",
+            "protected": false
+        }
+    }
+}
