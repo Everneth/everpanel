@@ -6,4 +6,6 @@ $lang = array(
 	'memberACPProfileTitle_everpanel_Main' => "Minecraft Profile",
 	'memberACPProfileLink_everpanel_Info' => "Info",
 	'memberACPProfileLink_everpanel_Access' => "Access",
+	'ep_name' => "Minecraft IGN",
+	'ep_uuid' => "Name",
 );
