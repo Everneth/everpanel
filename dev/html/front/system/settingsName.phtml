@@ -1,0 +1,6 @@
+<ips:template parameters="$form, $player, $member"/>
+{template="pageHeader" group="global" app="core" params="\IPS\Member::loggedIn()->language()->addToStack('module__everpanel_name'), \IPS\Member::loggedIn()->language()->addToStack('module__everpanel_name_blurb')"}
+<h2 class='ipsType_sectionHead'>{lang="editname"}</h2>
+<hr class='ipsHr'><br>
+<p>Once your name if saved to our system, you need to contact staff in order to change it. So please double check!</p>
+{$form|raw}

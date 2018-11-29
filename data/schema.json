@@ -69,6 +69,16 @@
                 "length": [
                     null
                 ]
+            },
+            "player_member_id": {
+                "type": "key",
+                "name": "player_member_id",
+                "columns": [
+                    "member_id"
+                ],
+                "length": [
+                    null
+                ]
             }
         }
     }

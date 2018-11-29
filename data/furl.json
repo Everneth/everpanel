@@ -1,0 +1,18 @@
+
+{
+	"topLevel": "",
+	"pages": {
+		"gamepanel": {
+			"friendly": "everpanel",
+			"real": "app=everpanel&module=gamepanel&controller=index"
+		},
+		"settings": {
+			"friendly": "everpanel/settings",
+			"real": "app=everpanel&module=system&controller=settings"
+		},
+		"settings_name": {
+			"friendly": "everpanel/settings/name",
+			"real": "app=everpanel&module=system&controller=settings&area=name"
+		}
+	}
+}

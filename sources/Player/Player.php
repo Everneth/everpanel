@@ -8,7 +8,7 @@
  * @since		27 Nov 2018
  */
 
- namespace everpanel;
+ namespace IPS\everpanel;
 
  /* To prevent PHP errors (extending class does not exist) revealing path */
 if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
@@ -48,7 +48,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 	/**
 	 * @brief	[ActiveRecord] Database ID Fields
 	 */
-	protected static $databaseIdFields = array( 'player_uuid' );
+	protected static $databaseIdFields = array( 'player_uuid', 'member_id' );
 	
 	/**
 	 * @brief	[ActiveRecord] Multiton Map
@@ -81,7 +81,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 			else
 			{
 				$player = parent::load( $id, $idField, $extraWhereClause );
-				return $member;
+				return $player;
 			}
 		}
 		catch ( \OutOfRangeException $e )
