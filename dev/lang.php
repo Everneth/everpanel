@@ -3,6 +3,7 @@
 $lang = array(
 	'__app_everpanel'	=> "EverPanel",
 	'frontnavigation_everpanel' => "EverPanel",
+	'frontnavigation_everpanel_settings' => "Profile Settings",
 	'memberACPProfileTitle_everpanel_Main' => "Minecraft Profile",
 	'memberACPProfileLink_everpanel_Info' => "Info",
 	'memberACPProfileLink_everpanel_Access' => "Access",
@@ -15,4 +16,5 @@ $lang = array(
 	'module__everpanel_name' => "Change Name",
 	'module__everpanel_name_blurb' => "Change your IGN and your UUID will be validated.",
 	'unknown' => "Unknown",
+	'module__everpanel_profile' => "Minecraft Profile",
 );

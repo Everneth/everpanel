@@ -1,11 +1,11 @@
 {
     "front": {
-        "dashboard": {
+        "system": {
             "default_controller": "",
             "protected": 0
         },
-        "system": {
-            "default_controller": "",
+        "players": {
+            "default_controller": "player",
             "protected": false
         }
     }

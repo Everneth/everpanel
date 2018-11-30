@@ -1,12 +1,12 @@
 <?php
 /**
- * @brief		Front Navigation Extension: EverPanel
+ * @brief		Front Navigation Extension: EverPanelSettings
  * @author		<a href='https://www.invisioncommunity.com'>Invision Power Services, Inc.</a>
  * @copyright	(c) Invision Power Services, Inc.
  * @license		https://www.invisioncommunity.com/legal/standards/
  * @package		Invision Community
  * @subpackage	EverPanel
- * @since		13 Nov 2018
+ * @since		29 Nov 2018
  */
 
 namespace IPS\everpanel\extensions\core\FrontNavigation;
@@ -19,9 +19,9 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 }
 
 /**
- * Front Navigation Extension: EverPanel
+ * Front Navigation Extension: EverPanelSettings
  */
-class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
+class _EverPanelSettings extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 {
 	/**
 	 * Get Type Title which will display in the AdminCP Menu Manager
@@ -30,7 +30,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public static function typeTitle()
 	{
-		return \IPS\Member::loggedIn()->language()->addToStack('frontnavigation_everpanel');
+		return \IPS\Member::loggedIn()->language()->addToStack('frontnavigation_everpanel_settings');
 	}
 	
 	/**
@@ -62,7 +62,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function title()
 	{
-		return \IPS\Member::loggedIn()->language()->addToStack('frontnavigation_everpanel');
+		return \IPS\Member::loggedIn()->language()->addToStack('frontnavigation_everpanel_settings');
 	}
 	
 	/**
@@ -72,7 +72,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function link()
 	{
-		return \IPS\Http\Url::internal( "/everpanel/" );
+		return \IPS\Http\Url::internal( "app=everpanel&module=system&controller=settings" );
 	}
 	
 	/**
@@ -82,7 +82,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function active()
 	{
-		return \IPS\Dispatcher::i()->application->directory === 'everpanel';
+		return \IPS\Dispatcher::i()->application->directory === 'everpanel' and \IPS\Dispatcher::i()->module->key === 'system' and \IPS\Dispatcher::i()->controller === 'settings';
 	}
 
 	/**
