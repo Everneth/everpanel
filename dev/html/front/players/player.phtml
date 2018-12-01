@@ -1,7 +1,16 @@
-<ips:template parameters="$member, $player" />
+<ips:template parameters="$member, $player, $pdata" />
 <div class='ipsBox ipsBox_transparent ipsAreaBackground' id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
-    {$player->player_uuid}
-    {$member->name}
+    <img src="https://crafatar.com/renders/body/{$player->player_uuid}?overlay" alt="{player->player_name}"/>
     <br />
-    {$player->api_uuid}
+    Name: {$member->name}
+    <br />
+    UUID: {$player->api_uuid}
+    <br />
+    Health: {$pdata['health']}
+    <br />
+    Last seen: {datetime="(int)($pdata['lastPlayed']/1000)"}
+    <br />
+    First login: {datetime="(int)($pdata['firstPlayed']/1000)"}
+    <br />
+    Level: {$pdata['level']}
 </div>

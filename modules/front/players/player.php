@@ -39,8 +39,24 @@ class _player extends \IPS\Dispatcher\Controller
 	protected function manage()
 	{
 		$player = \IPS\everpanel\Player::load($this->member->member_id, 'member_id');
+		$url = \IPS\Http\Url::external("http://play.everneth.com:7598/pdata/" . $player->api_uuid);
+		
+		// Now fetch it and decode the JSON
+		try
+		{
+    		$pdata = $url->request()->get()->decodeJson();
+		}
+		catch( \IPS\Http\Request\Exception $e )
+		{
+    		die( "There was a problem fetching the request" );
+		}
+		catch( \RuntimeException $e )
+		{
+    		die( "The response was not valid JSON" );
+		}
+		
 		//\IPS\Output::i()->linkTags['canonical'] = (string) $this->member->url();
-		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player );
+		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player, $pdata );
 	}
 	
 	// Create new methods with the same name as the 'do' parameter which should execute it
