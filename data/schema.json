@@ -57,6 +57,20 @@
                 "zerofill": false,
                 "auto_increment": true,
                 "binary": false
+            },
+            "api_uuid": {
+                "name": "api_uuid",
+                "type": "VARCHAR",
+                "length": 36,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": null,
+                "comment": "",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
             }
         },
         "indexes": {

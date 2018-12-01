@@ -140,12 +140,16 @@ class _settings extends \IPS\Dispatcher\Controller
 			// If it does, our player load has an active record
 			if(strcmp($player->player_name, 'Unknown') != 0)
 			{
-				$row = \IPS\Db::i()->insert('everpanel_players',  array('player_name' => NULL, 'player_uuid' => NULL, 'member_id' => $member->member_id));
+				$row = \IPS\Db::i()->insert('everpanel_players',  array('player_name' => NULL, 'player_uuid' => NULL, 'member_id' => $member->member_id, 'api_uuid' => NULL));
 				$player = \IPS\everpanel\Player::load($member->member_id, 'member_id');		
 			}
 			$player->player_name = $values['ep_name'];
 			$player->player_uuid = \IPS\everpanel\MojangAPI::getUuid($values['ep_name']);
 			$player->member_id = $member->member_id;
+
+			$UUID = $player->player_uuid;
+			$UUID = mb_substr($UUID, 0, 8) . '-' . mb_substr($UUID, 8, 4) . '-' . mb_substr($UUID, 12, 4) . '-' . mb_substr($UUID, 16, 4)  . '-' . mb_substr($UUID, 20);
+			$player->api_uuid = $UUID;
 			$player->save();
 			//We're done (?)
 			\IPS\Output::i()->redirect( \IPS\Http\Url::internal( 'app=everpanel&module=system&controller=settings', 'front', 'settings' ));			
