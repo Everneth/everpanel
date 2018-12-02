@@ -39,12 +39,16 @@ class _player extends \IPS\Dispatcher\Controller
 	protected function manage()
 	{
 		$player = \IPS\everpanel\Player::load($this->member->member_id, 'member_id');
-		$url = \IPS\Http\Url::external("http://play.everneth.com:7598/pdata/" . $player->api_uuid);
+		$pdata_url = \IPS\Http\Url::external("http://play.everneth.com:7598/pdata/" . $player->api_uuid);
+		$stats_url = \IPS\Http\Url::external("http://play.everneth.com:7598/stats/" . $player->api_uuid);
+		$advs_url = \IPS\Http\Url::external("http://play.everneth.com:7598/advs/" . $player->api_uuid);
 		
 		// Now fetch it and decode the JSON
 		try
 		{
-    		$pdata = $url->request()->get()->decodeJson();
+			$pdata = $pdata_url->request()->get()->decodeJson();
+			$stats = $stats_url->request()->get()->decodeJson();
+			$advs = $advs_url->request()->get()->decodeJson();
 		}
 		catch( \IPS\Http\Request\Exception $e )
 		{
@@ -56,7 +60,7 @@ class _player extends \IPS\Dispatcher\Controller
 		}
 		
 		//\IPS\Output::i()->linkTags['canonical'] = (string) $this->member->url();
-		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player, $pdata );
+		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player, $pdata, $stats, $advs );
 	}
 	
 	// Create new methods with the same name as the 'do' parameter which should execute it

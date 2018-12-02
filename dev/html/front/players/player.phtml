@@ -1,4 +1,4 @@
-<ips:template parameters="$member, $player, $pdata" />
+<ips:template parameters="$member, $player, $pdata, $stats, $advs" />
 <div class='ipsBox ipsBox_transparent ipsAreaBackground' id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
     <img src="https://crafatar.com/renders/body/{$player->player_uuid}?overlay" alt="{player->player_name}"/>
     <br />
@@ -13,4 +13,20 @@
     First login: {datetime="(int)($pdata['firstPlayed']/1000)"}
     <br />
     Level: {$pdata['level']}
+</div>
+<div class='ipsBox id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
+    Deaths by Creeper: {$stats['stats']['minecraft:killed_by']['minecraft:creeper']}
+    <br />
+    Deaths by Player: {$stats['stats']['minecraft:killed_by']['minecraft:player']}
+</div>
+<div class='ipsBox'>
+    <ul>
+        {{foreach $advs as $key => $value}}
+            {{if is_array($value)}}
+                {{if mb_substr($key, 0, 17) !== "minecraft:recipes"}}
+                    <li>{$key}</li>
+                {{endif}}
+            {{endif}}
+        {{endforeach}}
+    </ul>
 </div>
