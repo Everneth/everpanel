@@ -1,5 +1,78 @@
 <ips:template parameters="$member, $player, $pdata, $stats, $advs" />
-<div class='ipsBox ipsBox_transparent ipsAreaBackground' id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
+
+<ol class='ipsDataList'>
+	<li class='ipsDataItem ipsClearfix ipsDataItem_unread'>
+        <ul class='ipsDataItem_withPhoto ipsList_inline ipsDataItem_icon'>
+			<li><a href='#' class='ipsUserPhoto ipsUserPhoto_mini ipsPos_left'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ster_Orde_van_het_Britse_Rijk.jpg/220px-Ster_Orde_van_het_Britse_Rijk.jpg' alt=''></a></li>
+		</ul>
+		<div class='ipsDataItem_main'>
+			<h4 class='ipsDataItem_title'>{$player->player_name}</h4>
+			<p class='ipsDataItem_meta'>
+				{$player->api_uuid}
+			</p>
+			<ul class='ipsDataItem_subList ipsList_inline'>
+				<li class='ipsDataItem_unread'><a href='#'>&lt;Order of Saint Vicses&gt;</a> <span class='ipsBadge ipsBadge_positive
+'>Guild Leader</span></li>
+			</ul>
+		</div>
+	</li>
+</ol>
+<h2 class="ipsType_sectionTitle ipsType_reset cForumTitle">Main Advancements</h2>
+<div class='ipsBox'>
+<ol class='ipsDataList'>
+    <ul class='ipsDataItem_subList ipsList_inline'>
+        {{foreach $advs as $key => $value}}
+            {{if is_array($value)}}
+                {{if mb_substr($key, 0, 17) !== "minecraft:recipes"}}
+                    {{if mb_substr($key, mb_strlen($key)-4,4) !== "root"}}
+                        <li>{$key}</li>
+                    {{endif}}
+                {{endif}}
+            {{endif}}
+        {{endforeach}}
+    </ul>
+</ol>
+</div>
+<h2 class="ipsType_sectionTitle ipsType_reset cForumTitle">Roleplay Progression</h2>
+<div class='ipsBox'>
+    <p>kek</p>
+</div>
+
+
+<!-- The tab bar -->
+<div class='ipsTabs ipsClearfix' id='elTabBar' data-ipsTabBar data-ipsTabBar-contentArea='#elTabContent'>
+	<a href='#elTabBar' data-action='expandTabs'><i class='icon-caret-down'></i></a>
+	<ul role='tablist'>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_Kills' class='ipsTabs_item' aria-selected="true">
+				Kills
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_Mined' class='ipsTabs_item'>
+				Blocks Mined
+			</a>
+		</li>
+	</ul>
+</div>
+<!-- The tab panel wrapper -->
+<div class>
+<div id="elTabContent" class="ipsTabs_panels ipsPad_double ipsAreaBackground_reset">
+    <div id='ipsTabs_elTabBar_elPlayerTab_Kills_panel'>
+        <p>Test for kills panel</p>
+    </div>
+    <div id='ipsTabs_elTabBar_elPlayerTab_Mined_panel'>
+        <p>Test for mined panel</p>
+    </div>
+</div>
+<!--
+
+<div class='ipsBox ipsBox_transparent ipsAreaBackground'>
+Player Profile
+</div>
+<div class='ipsColumns'>
+<div class='ipsColumn ipsColumn_wide'>
+<div class='ipsBox' id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
     <img src="https://crafatar.com/renders/body/{$player->player_uuid}?overlay" alt="{player->player_name}"/>
     <br />
     Name: {$member->name}
@@ -14,6 +87,8 @@
     <br />
     Level: {$pdata['level']}
 </div>
+</div>
+<div class='ipsColumn ipsColumn_fluid'>
 <div class='ipsBox id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
     Deaths by Creeper: {$stats['stats']['minecraft:killed_by']['minecraft:creeper']}
     <br />
@@ -24,9 +99,13 @@
         {{foreach $advs as $key => $value}}
             {{if is_array($value)}}
                 {{if mb_substr($key, 0, 17) !== "minecraft:recipes"}}
-                    <li>{$key}</li>
+                    {{if mb_substr($key, mb_strlen($key)-4,4) !== "root"}}
+                        <li>{$key}</li>
+                    {{endif}}
                 {{endif}}
             {{endif}}
         {{endforeach}}
     </ul>
 </div>
+</div>
+</div>-->

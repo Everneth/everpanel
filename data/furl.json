@@ -3,7 +3,7 @@
 	"topLevel": "",
 	"pages": {
 		"player": {
-			"friendly": "everpanel/player/{#pid}",
+			"friendly": "everpanel/player/{#pid}-{?}",
 			"real": "app=everpanel&module=players&controller=player",
 			"verify": "\\IPS\\Member"
 		},

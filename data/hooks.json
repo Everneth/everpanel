@@ -1,1 +1,18 @@
-[]
+{
+    "contentcheck": {
+        "type": "C",
+        "class": "\\IPS\\Content"
+    },
+    "postcheck": {
+        "type": "C",
+        "class": "\\IPS\\Content\\Comment"
+    },
+    "threadcheck": {
+        "type": "C",
+        "class": "\\IPS\\forums\\Topic"
+    },
+    "postedcheck": {
+        "type": "C",
+        "class": "\\IPS\\forums\\Topic\\Post"
+    }
+}
