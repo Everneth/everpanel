@@ -72,7 +72,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function link()
 	{
-		return \IPS\Http\Url::internal( "/everpanel/" );
+		return \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player", 'front', 'player' );
 	}
 	
 	/**
@@ -82,7 +82,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function active()
 	{
-		return \IPS\Dispatcher::i()->application->directory === 'everpanel';
+		return \IPS\Dispatcher::i()->application->directory === 'everpanel' and \IPS\Dispatcher::i()->module->key === 'players' and \IPS\Dispatcher::i()->controller === 'player';
 	}
 
 	/**

@@ -16,6 +16,7 @@
 			</ul>
 		</div>
 	</li>
+    <img src='https://crafatar.com/renders/body/{$player->player_uuid}?overlay' alt='{$player->player_name}' />
 </ol>
 <h2 class="ipsType_sectionTitle ipsType_reset cForumTitle">Main Advancements</h2>
 <div class='ipsBox'>
@@ -53,59 +54,31 @@
 				Blocks Mined
 			</a>
 		</li>
+        <li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_Placed' class='ipsTabs_item'>
+				Blocks Placed
+			</a>
+		</li>
+        <li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_Travel' class='ipsTabs_item'>
+				Travel
+			</a>
+		</li>
 	</ul>
 </div>
 <!-- The tab panel wrapper -->
-<div class>
-<div id="elTabContent" class="ipsTabs_panels ipsPad_double ipsAreaBackground_reset">
-    <div id='ipsTabs_elTabBar_elPlayerTab_Kills_panel'>
+
+<section id="elTabBar_content" class="ipsTabs_panels ipsPad_double ipsAreaBackground_reset">
+    <div id='ipsTabs_elTabBar_elPlayerTab_Kills_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="false">
         <p>Test for kills panel</p>
     </div>
-    <div id='ipsTabs_elTabBar_elPlayerTab_Mined_panel'>
+    <div id='ipsTabs_elTabBar_elPlayerTab_Mined_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
         <p>Test for mined panel</p>
     </div>
-</div>
-<!--
-
-<div class='ipsBox ipsBox_transparent ipsAreaBackground'>
-Player Profile
-</div>
-<div class='ipsColumns'>
-<div class='ipsColumn ipsColumn_wide'>
-<div class='ipsBox' id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
-    <img src="https://crafatar.com/renders/body/{$player->player_uuid}?overlay" alt="{player->player_name}"/>
-    <br />
-    Name: {$member->name}
-    <br />
-    UUID: {$player->api_uuid}
-    <br />
-    Health: {$pdata['health']}
-    <br />
-    Last seen: {datetime="(int)($pdata['lastPlayed']/1000)"}
-    <br />
-    First login: {datetime="(int)($pdata['firstPlayed']/1000)"}
-    <br />
-    Level: {$pdata['level']}
-</div>
-</div>
-<div class='ipsColumn ipsColumn_fluid'>
-<div class='ipsBox id='elSettingsTabs' data-ipsTabBar data-ipsTabBar-contentArea='#elProfileTabContent' data-ipsTabBar-itemSelector='.ipsSideMenu_item' data-ipsTabBar-activeClass='ipsSideMenu_itemActive'>
-    Deaths by Creeper: {$stats['stats']['minecraft:killed_by']['minecraft:creeper']}
-    <br />
-    Deaths by Player: {$stats['stats']['minecraft:killed_by']['minecraft:player']}
-</div>
-<div class='ipsBox'>
-    <ul>
-        {{foreach $advs as $key => $value}}
-            {{if is_array($value)}}
-                {{if mb_substr($key, 0, 17) !== "minecraft:recipes"}}
-                    {{if mb_substr($key, mb_strlen($key)-4,4) !== "root"}}
-                        <li>{$key}</li>
-                    {{endif}}
-                {{endif}}
-            {{endif}}
-        {{endforeach}}
-    </ul>
-</div>
-</div>
-</div>-->
+    <div id='ipsTabs_elTabBar_elPlayerTab_Placed_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+        <p>Test for blocks placed panel</p>
+    </div>
+    <div id='ipsTabs_elTabBar_elPlayerTab_Travel_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+        <p>Test for travel panel</p>
+    </div>
+</section>

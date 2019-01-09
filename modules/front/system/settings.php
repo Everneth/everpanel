@@ -150,6 +150,7 @@ class _settings extends \IPS\Dispatcher\Controller
 			$UUID = $player->player_uuid;
 			$UUID = mb_substr($UUID, 0, 8) . '-' . mb_substr($UUID, 8, 4) . '-' . mb_substr($UUID, 12, 4) . '-' . mb_substr($UUID, 16, 4)  . '-' . mb_substr($UUID, 20);
 			$player->api_uuid = $UUID;
+			$player->player_seo_name = mb_strtolower($player->player_name);
 			$player->save();
 			//We're done (?)
 			\IPS\Output::i()->redirect( \IPS\Http\Url::internal( 'app=everpanel&module=system&controller=settings', 'front', 'settings' ));			

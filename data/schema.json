@@ -71,6 +71,20 @@
                 "zerofill": false,
                 "auto_increment": false,
                 "binary": false
+            },
+            "player_seo_name": {
+                "name": "player_seo_name",
+                "type": "VARCHAR",
+                "length": 16,
+                "decimals": null,
+                "values": null,
+                "allow_null": true,
+                "default": null,
+                "comment": "player SEO friendly name for URL",
+                "unsigned": false,
+                "zerofill": false,
+                "auto_increment": false,
+                "binary": false
             }
         },
         "indexes": {

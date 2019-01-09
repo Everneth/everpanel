@@ -155,5 +155,44 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 	{
 		$this->_data['player_uuid']				= $value;
 	}
+	/**
+	 * Get URL
+	 *
+	 * @return	\IPS\Http\Url
+	 */
+	public function url()
+	{
+		if( $this->_url === NULL )
+		{
+			$this->_url = \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player&pid={$this->player_id}", 'front', 'player', $this->player_seo_name );
+		}
 
+		return $this->_url;
+	}
+
+		/**
+	 * Load record based on a URL
+	 *
+	 * @param	\IPS\Http\Url	$url	URL to load from
+	 * @return	static
+	 * @throws	\InvalidArgumentException
+	 * @throws	\OutOfRangeException
+	 */
+	public static function loadFromUrl( \IPS\Http\Url $url )
+	{
+		try
+		{
+			$player = parent::loadFromUrl( $url );
+		}
+		catch( \InvalidArgumentException $e )
+		{
+			throw new \OutOfRangeException;
+		}
+
+		if ( !$player->player_id )
+		{
+			throw new \OutOfRangeException;
+		}
+		return $player;
+	}
  }
