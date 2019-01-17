@@ -14,5 +14,13 @@
     "postedcheck": {
         "type": "C",
         "class": "\\IPS\\forums\\Topic\\Post"
+    },
+    "player_profile_userbar": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_core_front_global"
+    },
+    "player_profile_url": {
+        "type": "C",
+        "class": "\\IPS\\Member"
     }
 }

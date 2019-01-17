@@ -1,4 +1,4 @@
-<ips:template parameters="$member, $player, $pdata, $stats, $advs" />
+<ips:template parameters="$member, $player, $pdata, $stats, $advs, $statkeys" />
 
 <ol class='ipsDataList'>
 	<li class='ipsDataItem ipsClearfix ipsDataItem_unread'>
@@ -26,7 +26,9 @@
             {{if is_array($value)}}
                 {{if mb_substr($key, 0, 17) !== "minecraft:recipes"}}
                     {{if mb_substr($key, mb_strlen($key)-4,4) !== "root"}}
-                        <li>{$key}</li>
+						{{if $value['done']}}
+                        	<li>{$key}</li>
+						{{endif}}
                     {{endif}}
                 {{endif}}
             {{endif}}
@@ -41,44 +43,106 @@
 
 
 <!-- The tab bar -->
-<div class='ipsTabs ipsClearfix' id='elTabBar' data-ipsTabBar data-ipsTabBar-contentArea='#elTabContent'>
+<div class='ipsTabs ipsClearfix' id='elTabBar' data-ipsTabBar data-ipsTabBar-contentArea='#elTabBar_content'>
 	<a href='#elTabBar' data-action='expandTabs'><i class='icon-caret-down'></i></a>
 	<ul role='tablist'>
 		<li role='presentation'>
-			<a href='#' role='tab' id='elPlayerTab_Kills' class='ipsTabs_item' aria-selected="true">
-				Kills
+			<a href='#' role='tab' id='elPlayerTab_minecraftbroken' class='ipsTabs_item' aria-selected="true">
+				{lang="$statkeys[0]"}
 			</a>
 		</li>
 		<li role='presentation'>
-			<a href='#' role='tab' id='elPlayerTab_Mined' class='ipsTabs_item'>
-				Blocks Mined
+			<a href='#' role='tab' id='elPlayerTab_minecraftkilled_by' class='ipsTabs_item'>
+				{lang="$statkeys[1]"}
 			</a>
 		</li>
-        <li role='presentation'>
-			<a href='#' role='tab' id='elPlayerTab_Placed' class='ipsTabs_item'>
-				Blocks Placed
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftkilled' class='ipsTabs_item'>
+				{lang="$statkeys[2]"}
 			</a>
 		</li>
-        <li role='presentation'>
-			<a href='#' role='tab' id='elPlayerTab_Travel' class='ipsTabs_item'>
-				Travel
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftmined' class='ipsTabs_item'>
+				{lang="$statkeys[3]"}
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftcustom' class='ipsTabs_item'>
+				{lang="$statkeys[4]"}
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftpicked_up' class='ipsTabs_item'>
+				{lang="$statkeys[5]"}
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftdropped' class='ipsTabs_item'>
+				{lang="$statkeys[6]"}
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftcrafted' class='ipsTabs_item'>
+				{lang="$statkeys[7]"}
+			</a>
+		</li>
+		<li role='presentation'>
+			<a href='#' role='tab' id='elPlayerTab_minecraftused' class='ipsTabs_item'>
+				{lang="$statkeys[8]"}
 			</a>
 		</li>
 	</ul>
 </div>
-<!-- The tab panel wrapper -->
 
+
+
+<!-- The tab panel wrapper -->
 <section id="elTabBar_content" class="ipsTabs_panels ipsPad_double ipsAreaBackground_reset">
-    <div id='ipsTabs_elTabBar_elPlayerTab_Kills_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="false">
-        <p>Test for kills panel</p>
-    </div>
-    <div id='ipsTabs_elTabBar_elPlayerTab_Mined_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
-        <p>Test for mined panel</p>
-    </div>
-    <div id='ipsTabs_elTabBar_elPlayerTab_Placed_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
-        <p>Test for blocks placed panel</p>
-    </div>
-    <div id='ipsTabs_elTabBar_elPlayerTab_Travel_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
-        <p>Test for travel panel</p>
-    </div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftbroken_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="false">
+		{{foreach $stats['stats']['minecraft:killed'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftkilled_by_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:broken'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftkilled_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:used'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftmined_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:picked_up'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftcustom_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:killed_by'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftpicked_up_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:custom'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftdropped_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:crafted'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftcrafted_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:dropped'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
+	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftused_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
+		{{foreach $stats['stats']['minecraft:mined'] as $stat => $count}}
+			<p>{$stat}:{$count}</p>
+		{{endforeach}}
+	</div>
 </section>
+
+	

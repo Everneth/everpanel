@@ -164,7 +164,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 	{
 		if( $this->_url === NULL )
 		{
-			$this->_url = \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player&pid={$this->player_id}", 'front', 'player', $this->player_seo_name );
+			$this->_url = \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player&pid={$this->member_id}", 'front', 'player', $this->player_seo_name );
 		}
 
 		return $this->_url;

@@ -38,6 +38,7 @@ class _player extends \IPS\Dispatcher\Controller
 	 */
 	protected function manage()
 	{
+		$statsTab = 'minecraft:broken';
 		$player = \IPS\everpanel\Player::load($this->member->member_id, 'member_id');
 		$pdata_url = \IPS\Http\Url::external("http://play.everneth.com:7598/pdata/" . $player->api_uuid);
 		$stats_url = \IPS\Http\Url::external("http://play.everneth.com:7598/stats/" . $player->api_uuid);
@@ -58,9 +59,15 @@ class _player extends \IPS\Dispatcher\Controller
 		{
     		die( "The response was not valid JSON" );
 		}
+
+		$statkeys = array();
+		foreach($stats['stats'] as $key => $value)
+		{
+			array_push($statkeys, $key);
+		}
 		
 		//\IPS\Output::i()->linkTags['canonical'] = (string) $this->member->url();
-		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player, $pdata, $stats, $advs );
+		\IPS\Output::i()->output = \IPS\Theme::i()->getTemplate( 'players' )->player( $this->member, $player, $pdata, $stats, $advs, $statkeys );
 	}
 	
 	// Create new methods with the same name as the 'do' parameter which should execute it

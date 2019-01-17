@@ -72,7 +72,7 @@ class _EverPanel extends \IPS\core\FrontNavigation\FrontNavigationAbstract
 	 */
 	public function link()
 	{
-		return \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player", 'front', 'player' );
+		return \IPS\Http\Url::internal( "app=everpanel&module=players&controller=player" );
 	}
 	
 	/**
