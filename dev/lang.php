@@ -18,6 +18,13 @@ $lang = array(
 	'unknown' => "Unknown",
 	'module__everpanel_profile' => "Minecraft Profile",
 	'menu_player_profile' => "My Player Profile",
+
+	/**
+	 * Minecraft Lang Settings
+	 * 
+	 */
+
+	 /** Tab headers */
 	'minecraft:broken' => "Blocks Broken",
 	'minecraft:killed_by' => "Mobs Killed By",
 	'minecraft:killed' => "Mobs Killed",
@@ -27,4 +34,70 @@ $lang = array(
 	'minecraft:dropped' => "Items Dropped",
 	'minecraft:crafted' => "Items crafted",
 	'minecraft:used' => "Items used",
+
+	/** Mobs */
+	'minecraft:witch' => "Witch",
+	'minecraft:spider' => "Spider",
+	'minecraft:skeleton' => "Skeleton",
+	'minecraft:creeper' => "Creeper",
+	'minecraft:zombie' => "Zombie",
+	'minecraft:cow' => "Cow",
+	'minecraft:phantom' => "Phantom",
+	'minecraft:drowned' => "Drowned",
+	'minecraft:rabbit' => "Rabbit",
+	'minecraft:bat' => "Bat",
+	'minecraft:squid' => "Squid",
+
+	/** Tools */
+	'minecraft:wooden_axe' => "Wooden axe",
+	'minecraft:wooden_pickaxe' => "Wooden pickaxe",
+	'minecraft:wooden_shovel' => "Wooden shovel",
+	'minecraft:wooden_sword' => "Wooden sword",
+	'minecraft:wooden_hoe' => "Wooden hoe",
+	'minecraft:stone_axe' => "Stone axe",
+	'minecraft:stone_pickaxe' => "Stone pickaxe",
+	'minecraft:stone_shovel' => "Stone shovel",
+	'minecraft:stone_sword' => "Stone sword",
+	'minecraft:stone_hoe' => "Stone hoe",
+	'minecraft:iron_axe' => "Iron axe",
+	'minecraft:iron_pickaxe' => "Iron pickaxe",
+	'minecraft:iron_shovel' => "Iron shovel",
+	'minecraft:iron_sword' => "Iron sword",
+	'minecraft:iron_hoe' => "Iron hoe",
+	'minecraft:golden_axe' => "Golden axe",
+	'minecraft:golden_pickaxe' => "Golden pickaxe",
+	'minecraft:golden_shovel' => "Golden shovel",
+	'minecraft:golden_sword' => "Golden sword",
+	'minecraft:golden_hoe' => "Golden hoe",
+	'minecraft:diamond_axe' => "Diamond axe",
+	'minecraft:diamond_pickaxe' => "Diamond pickaxe",
+	'minecraft:diamond_shovel' => "Diamond shovel",
+	'minecraft:diamond_sword' => "Diamond sword",
+	'minecraft:diamond_hoe' => "Diamond hoe",
+
+	/** Armor */
+	'minecraft:leather_helmet' => "Leather helmet",
+	'minecraft:leather_chestplate' => "Leather chestplate",
+	'minecraft:leather_leggings' => "Leather leggings",
+	'minecraft:leather_boots' => "Leather boots",
+	'minecraft:iron_hemlet' => "Iron helmet",
+	'minecraft:iron_chestplate' => "Iron chestplate",
+	'minecraft:iron_leggings' => "Iron leggings",
+	'minecraft:iron_boots' => "Iron boots",
+	'minecraft:golden_helmet' => "Golden helmet",
+	'minecraft:golden_chestplate' => "Golden chestplate",
+	'minecraft:golden_leggings' => "Golden leggings",
+	'minecraft:golden_boots' => "Golden boots",
+	'minecraft:diamond_helmet' => "Diamond helmet",
+	'minecraft:diamond_chestplate' => "Diamond chestplate",
+	'minecraft:diamond_leggings' => "Diamond leggings",
+	'minecraft:diamond_boots' => "Diamond boots",
+
+	/** Blocks */
+
+	/** Decorations */
+
+	/** Potions */
+
+	/** Misc */
 );

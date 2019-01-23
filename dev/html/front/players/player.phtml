@@ -99,14 +99,29 @@
 <!-- The tab panel wrapper -->
 <section id="elTabBar_content" class="ipsTabs_panels ipsPad_double ipsAreaBackground_reset">
 	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftbroken_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="false">
-		{{foreach $stats['stats']['minecraft:killed'] as $stat => $count}}
-			<p>{$stat}:{$count}</p>
-		{{endforeach}}
+		<ol class='ipsDataList ipsDataList_zebra' itemscope itemtype="http://schema.org/ItemList">
+			{{foreach $stats['stats']['minecraft:killed'] as $stat => $count}}
+				<li class='ipsDataItem' itemprop="itemListElement">
+					<div class='ipsGrid'>
+						<div class='ipsGrid_span2'>{lang="$stat"}:</div> 
+						<div class='ipsGrid_span1'>{$count}</div>
+					</div>
+				</li>
+			{{endforeach}}
+		</ol>
 	</div>
 	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftkilled_by_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
-		{{foreach $stats['stats']['minecraft:broken'] as $stat => $count}}
-			<p>{$stat}:{$count}</p>
-		{{endforeach}}
+		<ol class='ipsDataList ipsDataList_zebra' itemscope itemtype="http://schema.org/ItemList">
+		<div class='ipsGrid'>	
+			{{foreach $stats['stats']['minecraft:broken'] as $stat => $count}}
+			<div class='ipsGrid_span2'>
+				<li class='ipsDataItem' itemprop="itemListElement">
+					{lang="$stat"}: {$count}
+				</li>
+			</div>
+			{{endforeach}}
+		</div>
+		</ol>
 	</div>
 	<div id='ipsTabs_elTabBar_elPlayerTab_minecraftkilled_panel' class="ipsTabs_panel ipsAreaBackground_reset" aria-hidden="true">
 		{{foreach $stats['stats']['minecraft:used'] as $stat => $count}}
