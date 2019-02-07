@@ -1,0 +1,9 @@
+<ips:template parameters="$title, $content, $margins=TRUE, $class='', $id=NULL, $showTitle=FALSE" />
+{{if $title and $showTitle}}
+<div class='ipsClearfix ipsPad'>
+	<h1 class='ipsType_pageTitle'>{$title}</h1>
+</div>
+{{endif}}
+<div class='acpBlock {$class}' {{if $id !== NULL}}id="{$id}"{{endif}}>
+	{$content|raw}
+</div>

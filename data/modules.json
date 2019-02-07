@@ -6,6 +6,12 @@
         },
         "players": {
             "default_controller": "player",
+            "protected": 0
+        }
+    },
+    "admin": {
+        "settings": {
+            "default_controller": "",
             "protected": false
         }
     }

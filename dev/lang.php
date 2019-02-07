@@ -19,6 +19,14 @@ $lang = array(
 	'module__everpanel_profile' => "Minecraft Profile",
 	'menu_player_profile' => "My Player Profile",
 
+	/** ACP */
+	'menu__everpanel_settings' => "EverPanel Settings",
+	'menu__everpanel_settings_emiApi' => "EMI API Key",
+	'menutab__everpanel_icon' => "coffee",
+	'emi_api_settings' => "EMI API Settings",
+	'menu__everpanel_settings_emi_api' => "EMI API",
+	'emi_api_key' => "EMI API key",
+
 	/**
 	 * Minecraft Lang Settings
 	 * 

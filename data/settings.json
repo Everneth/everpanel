@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "key": "emi_api_key",
+        "default": "0"
+    }
+]
