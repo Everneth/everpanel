@@ -2,6 +2,14 @@
     "settings": {
         "emiApi": {
             "emiApi_manage": "emiApi_manage"
+        },
+        "multicraftApi": {
+            "multicraftApi_manage": "multicraftApi_manage"
+        }
+    },
+    "consoles": {
+        "mainConsole": {
+            "mainConsole_manage": "mainConsole_manage"
         }
     }
 }

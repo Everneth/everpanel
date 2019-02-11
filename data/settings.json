@@ -2,5 +2,17 @@
     {
         "key": "emi_api_key",
         "default": "0"
+    },
+    {
+        "key": "multicraft_api_key",
+        "default": "0"
+    },
+    {
+        "key": "multicraft_api_url",
+        "default": "localhost"
+    },
+    {
+        "key": "multicraft_api_user",
+        "default": "admin"
     }
 ]

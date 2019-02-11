@@ -26,6 +26,21 @@ $lang = array(
 	'emi_api_settings' => "EMI API Settings",
 	'menu__everpanel_settings_emi_api' => "EMI API",
 	'emi_api_key' => "EMI API key",
+	'menu__everpanel_settings_multicraftApi' => "Multicraft API Key",
+	'multicraft_api_settings' => "Multicraft API Settings",
+	'menu__everpanel_settings_multicraft_api' => "Multicraft API",
+	'multicraft_api_key' => "Multicraft API key",
+	'multicraft_api_user' => "Multicraft API user",
+	'multicraft_api_url' => "Multicraft API URL",
+	'menu__everpanel_consoles' => "Server Consoles",
+	'menu__everpanel_consoles_mainConsole' => "Main Server Console",
+	'main_server_console' => "Main Server Console",
+
+	/** Extensions */
+	'complete_profile_player_profile' => "Player Profile",
+	'complete_profile_ign' => "In-Game Name",
+	'profile_step_subaction_player_profile' => "Field",
+
 
 	/**
 	 * Minecraft Lang Settings

@@ -12,6 +12,10 @@
     "admin": {
         "settings": {
             "default_controller": "",
+            "protected": 0
+        },
+        "consoles": {
+            "default_controller": "",
             "protected": false
         }
     }

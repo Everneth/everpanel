@@ -5,6 +5,20 @@
             "controller": "emiApi",
             "do": "",
             "restriction": "emiApi_manage"
+        },
+        "multicraftApi": {
+            "tab": "everpanel",
+            "controller": "multicraftApi",
+            "do": "",
+            "restriction": "multicraftApi_manage"
+        }
+    },
+    "consoles": {
+        "mainConsole": {
+            "tab": "everpanel",
+            "controller": "mainConsole",
+            "do": "",
+            "restriction": "mainConsole_manage"
         }
     }
 }
