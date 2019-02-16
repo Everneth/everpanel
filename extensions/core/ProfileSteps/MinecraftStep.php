@@ -69,7 +69,26 @@ class _MinecraftStep
 	 */
 	public function completed( \IPS\Member\ProfileStep $step, \IPS\Member $member = NULL )
 	{
-		return FALSE;
+		$member = $member ?: \IPS\Member::loggedIn();
+		
+		if ( ! $member->group['g_edit_profile'] )
+		{
+			/* Member has no permission to edit profile */
+			return TRUE;
+		}
+		
+		/* Does the member have any profile fields? */
+		if ( ! count( $member->profileFields() ) ) 
+		{
+			return FALSE;
+		}
+		
+		$done = 0;
+		foreach( $step->subcompletion_act as $item )
+		{
+
+		}
+		return ( $done === count( $step->subcompletion_act ) );
 	}
 	
 	/**
