@@ -1,4 +1,12 @@
 {
+    "consoles": {
+        "mainConsole": {
+            "tab": "everpanel",
+            "controller": "mainConsole",
+            "do": "",
+            "restriction": "mainConsole_manage"
+        }
+    },
     "settings": {
         "emiApi": {
             "tab": "everpanel",
@@ -11,14 +19,6 @@
             "controller": "multicraftApi",
             "do": "",
             "restriction": "multicraftApi_manage"
-        }
-    },
-    "consoles": {
-        "mainConsole": {
-            "tab": "everpanel",
-            "controller": "mainConsole",
-            "do": "",
-            "restriction": "mainConsole_manage"
         }
     }
 }

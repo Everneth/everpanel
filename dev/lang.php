@@ -18,6 +18,7 @@ $lang = array(
 	'unknown' => "Unknown",
 	'module__everpanel_profile' => "Minecraft Profile",
 	'menu_player_profile' => "My Player Profile",
+	'ep_ign' => "Minecraft IGN",
 
 	/** ACP */
 	'menu__everpanel_settings' => "EverPanel Settings",

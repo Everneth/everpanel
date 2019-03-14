@@ -31,7 +31,7 @@ class _EverPanelSync
 	 */
 	public function onCreateAccount( $member )
 	{
-	
+		\IPS\Db::i()->insert('everpanel_players',  array('player_name' => NULL, 'player_uuid' => NULL, 'member_id' => $member->member_id, 'api_uuid' => NULL));
 	}
 	
 	/**
