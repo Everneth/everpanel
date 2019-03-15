@@ -10,5 +10,9 @@
     "registration_ign_field_hook": {
         "type": "C",
         "class": "\\IPS\\core\\modules\\front\\system\\register"
+    },
+    "player_profile_posturl": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_forums_front_topics"
     }
 }
