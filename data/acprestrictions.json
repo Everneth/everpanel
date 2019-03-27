@@ -11,5 +11,6 @@
         "mainConsole": {
             "mainConsole_manage": "mainConsole_manage"
         }
-    }
+    },
+    "players": []
 }

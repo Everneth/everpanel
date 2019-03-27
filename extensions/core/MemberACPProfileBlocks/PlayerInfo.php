@@ -30,6 +30,42 @@ class _PlayerInfo extends \IPS\core\MemberACPProfile\Block
 	 */
 	public function output()
 	{
-		return \IPS\Theme::i()->getTemplate('memberprofile', 'everpanel', 'admin')->playerInfo($this->member);
+		$player = \IPS\everpanel\Player::load($this->member->member_id, 'member_id');
+		return \IPS\Theme::i()->getTemplate('memberprofile', 'everpanel', 'admin')->playerInfo($this->member, $player);
+	}
+
+	/**
+	 * Get Block Title
+	 *
+	 * @return	string
+	 */
+	public function blockTitle()
+	{
+		return 'profile_data';
+	}
+
+	/**
+	 * Show Edit Link?
+	 *
+	 * @return	bool
+	 */
+	protected function showEditLink()
+	{
+		return true;
+	}
+
+	/**
+	 * Edit Window
+	 *
+	 * @return	string
+	 */
+	public function edit()
+	{
+		/* Build basic form */
+		$form = new \IPS\Helpers\Form;
+		$form->addHeader('profile_data');
+		$form->add( new \IPS\Helpers\Form\Text( 'ep_name', $player->player_name, TRUE));
+		$form->add( new \IPS\Helpers\Form\Text( 'ep_uuid', $player->player_uuid, TRUE));
+		return $form;
 	}
 }

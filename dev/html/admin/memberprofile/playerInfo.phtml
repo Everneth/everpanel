@@ -1,13 +1,15 @@
-<ips:template parameters="$member"/>
+<ips:template parameters="$member, $player"/>
 <div class="acpMemberView_info ipsBox ipsSpacer_bottom ipsSpacer_double">
     <h2 class='ipsBox_titleBar ipsType_reset'>
         Player Info
-        {{if member.hasAcpRestriction( 'core', 'members', 'member_edit' ) and ( !$member->isAdmin() or ( member.hasAcpRestriction( 'core', 'members', 'member_edit_admin' ) and  member.hasAcpRestriction( 'core', 'members', 'member_move_admin1' ) ) )}}
-			<a href="{url="app=everpanel&module=members&controller=members&do=editBlock&block=IPS\\core\\extensions\\core\\MemberACPProfileBlocks\\Groups&id={$member->member_id}"}" class="ipsPos_right ipsType_medium" data-ipsDialog data-ipsDialog-title="{lang="memberACPProfileLink_everpanel_Info"}">{lang="edit"}</a>
+        {{if member.hasAcpRestriction( 'core', 'members', 'member_edit' ) and ( !$member->isAdmin() or member.hasAcpRestriction( 'core', 'members', 'member_edit_admin' ) )}}
+			<a href="{url="app=core&module=members&controller=members&do=editBlock&block=IPS\\everpanel\\extensions\\core\\MemberACPProfileBlocks\\PlayerInfo&id={$member->member_id}"}" class="ipsPos_right ipsType_medium" data-ipsDialog data-ipsDialog-title="{lang="warnings_and_restrictions"}">{lang="edit"}</a>
 		{{endif}}
     </h2>
     <div class='ipsPad ipsClearfix'>
-        Player IGN<br />
-        Player UUID
+        <h3 class='ipsType_minorHeading'>Player Name</h3>
+        {$player->player_name}<br />
+        <h3 class='ipsType_minorHeading'>UUID</h3>
+        {$player->player_uuid}
     </div>
 </div>

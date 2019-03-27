@@ -16,7 +16,7 @@
         },
         "consoles": {
             "default_controller": "",
-            "protected": false
+            "protected": 0
         }
     }
 }

@@ -14,5 +14,9 @@
     "player_profile_posturl": {
         "type": "S",
         "class": "\\IPS\\Theme\\class_forums_front_topics"
+    },
+    "edit_player": {
+        "type": "C",
+        "class": "\\IPS\\core\\modules\\admin\\members\\members"
     }
 }

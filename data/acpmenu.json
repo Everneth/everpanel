@@ -20,5 +20,6 @@
             "do": "",
             "restriction": "multicraftApi_manage"
         }
-    }
+    },
+    "players": []
 }
