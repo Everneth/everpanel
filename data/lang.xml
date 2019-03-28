@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+ <app key="everpanel" version="10000">
+  <word key="__app_everpanel" js="0">EverPanel</word>
+  <word key="frontnavigation_everpanel" js="0">EverPanel</word>
+  <word key="frontnavigation_everpanel_settings" js="0">Profile Settings</word>
+  <word key="memberACPProfileTitle_everpanel_Main" js="0">Minecraft Profile</word>
+  <word key="memberACPProfileLink_everpanel_Info" js="0">Info</word>
+  <word key="memberACPProfileLink_everpanel_Access" js="0">Access</word>
+  <word key="ep_name" js="0">Minecraft IGN</word>
+  <word key="ep_uuid" js="0">Name</word>
+  <word key="ep_settings_blurb" js="0">Manage your Minecraft IGN. You will only be able to set this once!</word>
+  <word key="ep_settings" js="0">Minecraft Profile Settings</word>
+  <word key="editname" js="0">Edit IGN</word>
+  <word key="overview" js="0">Overview</word>
+  <word key="module__everpanel_name" js="0">Change Name</word>
+  <word key="module__everpanel_name_blurb" js="0">Change your IGN and your UUID will be validated.</word>
+  <word key="unknown" js="0">Unknown</word>
+  <word key="module__everpanel_profile" js="0">Minecraft Profile</word>
+  <word key="menu_player_profile" js="0">My Player Profile</word>
+  <word key="ep_ign" js="0">Minecraft IGN</word>
+  <word key="menu__everpanel_settings" js="0">EverPanel Settings</word>
+  <word key="menu__everpanel_settings_emiApi" js="0">EMI API Key</word>
+  <word key="menutab__everpanel_icon" js="0">coffee</word>
+  <word key="emi_api_settings" js="0">EMI API Settings</word>
+  <word key="menu__everpanel_settings_emi_api" js="0">EMI API</word>
+  <word key="emi_api_key" js="0">EMI API key</word>
+  <word key="menu__everpanel_settings_multicraftApi" js="0">Multicraft API Key</word>
+  <word key="multicraft_api_settings" js="0">Multicraft API Settings</word>
+  <word key="menu__everpanel_settings_multicraft_api" js="0">Multicraft API</word>
+  <word key="multicraft_api_key" js="0">Multicraft API key</word>
+  <word key="multicraft_api_user" js="0">Multicraft API user</word>
+  <word key="multicraft_api_url" js="0">Multicraft API URL</word>
+  <word key="menu__everpanel_consoles" js="0">Server Consoles</word>
+  <word key="menu__everpanel_consoles_mainConsole" js="0">Main Server Console</word>
+  <word key="main_server_console" js="0">Main Server Console</word>
+  <word key="complete_profile_player_profile" js="0">Player Profile</word>
+  <word key="complete_profile_ign" js="0">In-Game Name</word>
+  <word key="profile_step_subaction_player_profile" js="0">Field</word>
+  <word key="minecraft:broken" js="0">Blocks Broken</word>
+  <word key="minecraft:killed_by" js="0">Mobs Killed By</word>
+  <word key="minecraft:killed" js="0">Mobs Killed</word>
+  <word key="minecraft:mined" js="0">Blocks Mined</word>
+  <word key="minecraft:custom" js="0">Misc.</word>
+  <word key="minecraft:picked_up" js="0">Items picked up</word>
+  <word key="minecraft:dropped" js="0">Items Dropped</word>
+  <word key="minecraft:crafted" js="0">Items crafted</word>
+  <word key="minecraft:used" js="0">Items used</word>
+  <word key="minecraft:witch" js="0">Witch</word>
+  <word key="minecraft:spider" js="0">Spider</word>
+  <word key="minecraft:skeleton" js="0">Skeleton</word>
+  <word key="minecraft:creeper" js="0">Creeper</word>
+  <word key="minecraft:zombie" js="0">Zombie</word>
+  <word key="minecraft:cow" js="0">Cow</word>
+  <word key="minecraft:phantom" js="0">Phantom</word>
+  <word key="minecraft:drowned" js="0">Drowned</word>
+  <word key="minecraft:rabbit" js="0">Rabbit</word>
+  <word key="minecraft:bat" js="0">Bat</word>
+  <word key="minecraft:squid" js="0">Squid</word>
+  <word key="minecraft:wooden_axe" js="0">Wooden axe</word>
+  <word key="minecraft:wooden_pickaxe" js="0">Wooden pickaxe</word>
+  <word key="minecraft:wooden_shovel" js="0">Wooden shovel</word>
+  <word key="minecraft:wooden_sword" js="0">Wooden sword</word>
+  <word key="minecraft:wooden_hoe" js="0">Wooden hoe</word>
+  <word key="minecraft:stone_axe" js="0">Stone axe</word>
+  <word key="minecraft:stone_pickaxe" js="0">Stone pickaxe</word>
+  <word key="minecraft:stone_shovel" js="0">Stone shovel</word>
+  <word key="minecraft:stone_sword" js="0">Stone sword</word>
+  <word key="minecraft:stone_hoe" js="0">Stone hoe</word>
+  <word key="minecraft:iron_axe" js="0">Iron axe</word>
+  <word key="minecraft:iron_pickaxe" js="0">Iron pickaxe</word>
+  <word key="minecraft:iron_shovel" js="0">Iron shovel</word>
+  <word key="minecraft:iron_sword" js="0">Iron sword</word>
+  <word key="minecraft:iron_hoe" js="0">Iron hoe</word>
+  <word key="minecraft:golden_axe" js="0">Golden axe</word>
+  <word key="minecraft:golden_pickaxe" js="0">Golden pickaxe</word>
+  <word key="minecraft:golden_shovel" js="0">Golden shovel</word>
+  <word key="minecraft:golden_sword" js="0">Golden sword</word>
+  <word key="minecraft:golden_hoe" js="0">Golden hoe</word>
+  <word key="minecraft:diamond_axe" js="0">Diamond axe</word>
+  <word key="minecraft:diamond_pickaxe" js="0">Diamond pickaxe</word>
+  <word key="minecraft:diamond_shovel" js="0">Diamond shovel</word>
+  <word key="minecraft:diamond_sword" js="0">Diamond sword</word>
+  <word key="minecraft:diamond_hoe" js="0">Diamond hoe</word>
+  <word key="minecraft:leather_helmet" js="0">Leather helmet</word>
+  <word key="minecraft:leather_chestplate" js="0">Leather chestplate</word>
+  <word key="minecraft:leather_leggings" js="0">Leather leggings</word>
+  <word key="minecraft:leather_boots" js="0">Leather boots</word>
+  <word key="minecraft:iron_hemlet" js="0">Iron helmet</word>
+  <word key="minecraft:iron_chestplate" js="0">Iron chestplate</word>
+  <word key="minecraft:iron_leggings" js="0">Iron leggings</word>
+  <word key="minecraft:iron_boots" js="0">Iron boots</word>
+  <word key="minecraft:golden_helmet" js="0">Golden helmet</word>
+  <word key="minecraft:golden_chestplate" js="0">Golden chestplate</word>
+  <word key="minecraft:golden_leggings" js="0">Golden leggings</word>
+  <word key="minecraft:golden_boots" js="0">Golden boots</word>
+  <word key="minecraft:diamond_helmet" js="0">Diamond helmet</word>
+  <word key="minecraft:diamond_chestplate" js="0">Diamond chestplate</word>
+  <word key="minecraft:diamond_leggings" js="0">Diamond leggings</word>
+  <word key="minecraft:diamond_boots" js="0">Diamond boots</word>
+ </app>
+</language>

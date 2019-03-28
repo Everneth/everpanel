@@ -1,0 +1,118 @@
+{
+    "1": {
+        "method": "createTable",
+        "params": [
+            {
+                "name": "everpanel_players",
+                "columns": {
+                    "player_name": {
+                        "name": "player_name",
+                        "type": "VARCHAR",
+                        "length": 16,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "Player IGN",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "player_uuid": {
+                        "name": "player_uuid",
+                        "type": "VARCHAR",
+                        "length": 36,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "Minecraft UUID",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "player_id": {
+                        "name": "player_id",
+                        "type": "BIGINT",
+                        "length": 20,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": false,
+                        "default": null,
+                        "comment": "ID Number",
+                        "unsigned": true,
+                        "zerofill": false,
+                        "auto_increment": true,
+                        "binary": false
+                    },
+                    "member_id": {
+                        "name": "member_id",
+                        "type": "BIGINT",
+                        "length": 20,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "forum member id",
+                        "unsigned": true,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "api_uuid": {
+                        "name": "api_uuid",
+                        "type": "VARCHAR",
+                        "length": 36,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "player_seo_name": {
+                        "name": "player_seo_name",
+                        "type": "VARCHAR",
+                        "length": 16,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "player SEO friendly name for URL",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    }
+                },
+                "indexes": {
+                    "PRIMARY": {
+                        "type": "primary",
+                        "name": "PRIMARY",
+                        "columns": [
+                            "player_id"
+                        ],
+                        "length": [
+                            null
+                        ]
+                    },
+                    "player_member_id": {
+                        "type": "key",
+                        "name": "player_member_id",
+                        "columns": [
+                            "member_id"
+                        ],
+                        "length": [
+                            null
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
