@@ -18,5 +18,9 @@
     "edit_player": {
         "type": "C",
         "class": "\\IPS\\core\\modules\\admin\\members\\members"
+    },
+    "ACPblocks_hook": {
+        "type": "C",
+        "class": "\\IPS\\core\\extensions\\core\\MemberACPProfileTabs\\Main"
     }
 }

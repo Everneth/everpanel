@@ -21,5 +21,19 @@
             "restriction": "multicraftApi_manage"
         }
     },
-    "players": []
+    "players": [],
+    "houses": {
+        "manageHouses": {
+            "tab": "everpanel",
+            "controller": "manageHouses",
+            "do": "",
+            "restriction": "manageHouses_manage"
+        },
+        "externalDbSettings": {
+            "tab": "everpanel",
+            "controller": "externalDbSettings",
+            "do": "",
+            "restriction": "externalDbSettings_manage"
+        }
+    }
 }

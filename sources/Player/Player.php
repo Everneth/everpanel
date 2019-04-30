@@ -1,6 +1,6 @@
 <?php
 /**
- * @brief		MembPlayerer Model
+ * @brief		Player Model
  * @author		<a href='https://www.everneth.com'>Everneth SMP</a>
  * @copyright	(c) Everneth
  * @license		MIT
@@ -23,7 +23,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 
  class _Player extends \IPS\Patterns\ActiveRecord
  {
-     	/**
+   /**
 	 * @brief	Application
 	 */
 	public static $application = 'everpanel';

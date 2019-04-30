@@ -114,5 +114,97 @@
                 }
             }
         ]
+    },
+    {
+        "method": "createTable",
+        "params": [
+            {
+                "name": "everpanel_houses",
+                "columns": {
+                    "house_name": {
+                        "name": "house_name",
+                        "type": "VARCHAR",
+                        "length": 16,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "house_icon": {
+                        "name": "house_icon",
+                        "type": "TEXT",
+                        "length": null,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "house_id": {
+                        "name": "house_id",
+                        "type": "BIGINT",
+                        "length": 20,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": false,
+                        "default": null,
+                        "comment": "ID Number",
+                        "unsigned": true,
+                        "zerofill": false,
+                        "auto_increment": true,
+                        "binary": false
+                    },
+                    "house_description": {
+                        "name": "house_description",
+                        "type": "TEXT",
+                        "length": null,
+                        "decimals": null,
+                        "values": null,
+                        "allow_null": true,
+                        "default": null,
+                        "comment": "",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    },
+                    "house_enabled": {
+                        "name": "house_enabled",
+                        "type": "TINYINT",
+                        "length": null,
+                        "decimals": null,
+                        "values": [],
+                        "allow_null": false,
+                        "default": "1",
+                        "comment": "",
+                        "unsigned": false,
+                        "zerofill": false,
+                        "auto_increment": false,
+                        "binary": false
+                    }
+                },
+                "indexes": {
+                    "PRIMARY": {
+                        "type": "primary",
+                        "name": "PRIMARY",
+                        "columns": [
+                            "house_id"
+                        ],
+                        "length": [
+                            null
+                        ]
+                    }
+                }
+            }
+        ]
     }
 ]

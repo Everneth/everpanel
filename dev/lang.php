@@ -21,6 +21,7 @@ $lang = array(
 	'ep_ign' => "Minecraft IGN",
 
 	/** ACP */
+	'menutab__everpanel' => "EverPanel",
 	'menu__everpanel_settings' => "EverPanel Settings",
 	'menu__everpanel_settings_emiApi' => "EMI API Key",
 	'menutab__everpanel_icon' => "coffee",
@@ -36,6 +37,17 @@ $lang = array(
 	'menu__everpanel_consoles' => "Server Consoles",
 	'menu__everpanel_consoles_mainConsole' => "Main Server Console",
 	'main_server_console' => "Main Server Console",
+	'everpanel_houses' => "Royal Houses of Everneth",
+	'menu__everpanel_houses_externalDbSettings' => "External DB Settings",
+	'menu__everpanel_houses_manageHouses' => "Manage Houses",
+	'menu__everpanel_houses' => "Royal Houses",
+
+	/** Houses */
+	'house_enabled' => "Enable House?",
+	'house_name' => "House Title",
+	'house_icon' => "House Crest",
+	'house_description' => "Background Information",
+
 
 	/** Extensions */
 	'complete_profile_player_profile' => "Player Profile",

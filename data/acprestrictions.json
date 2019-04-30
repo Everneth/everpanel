@@ -12,5 +12,13 @@
             "mainConsole_manage": "mainConsole_manage"
         }
     },
-    "players": []
+    "players": [],
+    "houses": {
+        "manageHouses": {
+            "manageHouses_manage": "manageHouses_manage"
+        },
+        "externalDbSettings": {
+            "externalDbSettings_manage": "externalDbSettings_manage"
+        }
+    }
 }

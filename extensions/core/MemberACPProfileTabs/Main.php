@@ -38,6 +38,7 @@ class _Main extends \IPS\core\MemberACPProfile\MainTab
 	{
 		return array(
 			'IPS\everpanel\extensions\core\MemberACPProfileBlocks\PlayerInfo',
+			'IPS\everpanel\extensions\core\MemberACPProfileBlocks\RoyalHouseProfileBlock',
 		);
 	}
 }

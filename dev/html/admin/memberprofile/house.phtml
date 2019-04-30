@@ -1,0 +1,14 @@
+<ips:template parameters="$member, $house" />
+<div class='acpMemberView_groups ipsBox ipsSpacer_bottom ipsSpacer_double'>
+	<h2 class='ipsBox_titleBar ipsType_reset'>
+		{{if member.hasAcpRestriction( 'core', 'members', 'member_edit' ) and ( !$member->isAdmin() or ( member.hasAcpRestriction( 'core', 'members', 'member_edit_admin' ) and  member.hasAcpRestriction( 'core', 'members', 'member_move_admin1' ) ) )}}
+			<a href="#" class="ipsPos_right ipsType_medium" data-ipsDialog data-ipsDialog-title="{lang="groups"}">{lang="edit"}</a>
+		{{endif}}
+		Royal House
+	</h2>
+	<div class='ipsPad ipsClearfix'>
+		{{if $member->group['g_icon'] }}
+			<img src='{file="$member->group['g_icon']" extension="core_Theme"}' alt='' class="ipsPos_right">
+		{{endif}}
+	</div>
+</div>

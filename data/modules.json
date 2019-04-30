@@ -17,6 +17,10 @@
         "consoles": {
             "default_controller": "",
             "protected": 0
+        },
+        "houses": {
+            "default_controller": "",
+            "protected": false
         }
     }
 }

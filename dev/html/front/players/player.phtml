@@ -1,5 +1,5 @@
-<ips:template parameters="$member, $player, $pdata, $stats, $advs, $statkeys" />
-
+<ips:template parameters="$member, $player, $pdata, $stats, $advs, $statkeys, $playerExists" />
+{{if $playerExists}}
 <ol class='ipsDataList'>
 	<li class='ipsDataItem ipsClearfix ipsDataItem_unread'>
         <ul class='ipsDataItem_withPhoto ipsList_inline ipsDataItem_icon'>
@@ -159,5 +159,11 @@
 		{{endforeach}}
 	</div>
 </section>
-
+{{else}}
+<div class='ipsBox ipsPad_double'>
+	<h1 class='ipsType_sectionHead'>Hold up!</h1>
+	<p>Your profile is not available. Either you have not been whitelisted or joined the server yet.</p>
+	<a href='{setting="base_url"}' class='ipsButton ipsButton_normal ipsButton_fullWidth'>Index</a>
+</div>
+{{endif}}
 	
